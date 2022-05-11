@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+          <menuitem id="webpay_payment_report_menu" action="webpay_payment_report_action" name="Webpay Report" parent="sale.menu_sale_report"/>
+
+          <record id="webpay_payment_report_action_view_pivot" model="ir.ui.view">
+            <field name="name">Webpay Report</field>
+            <field name="model">webpay.payment.report</field>
+            <field name="arch" type="xml">
+              <pivot>
+                    <field name="write_date" type="row"/>
+                    <field name="amount" type="measure"/>
+              </pivot>
+            </field>
+          </record>
+
+          <record id="webpay_payment_report_action" model="ir.actions.act_window">
+            <field name="name">Webpay Report</field>
+            <field name="res_model">webpay.payment.report</field>
+            <field name="view_mode">pivot</field>
+          </record>
+    </data>
+</odoo>
