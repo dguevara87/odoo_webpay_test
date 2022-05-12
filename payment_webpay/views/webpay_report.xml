@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
-          <menuitem id="webpay_payment_report_menu" action="webpay_payment_report_action" name="Webpay Report" parent="sale.menu_sale_report"/>
-
+    <data>        
           <record id="webpay_payment_report_action_view_pivot" model="ir.ui.view">
             <field name="name">Webpay Report</field>
             <field name="model">webpay.payment.report</field>
@@ -19,5 +17,7 @@
             <field name="res_model">webpay.payment.report</field>
             <field name="view_mode">pivot</field>
           </record>
+
+          <menuitem id="webpay_payment_report_menu" action="webpay_payment_report_action" name="Webpay Report" parent="sale.menu_sale_report"/>
     </data>
 </odoo>
